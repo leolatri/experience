@@ -1,0 +1,82 @@
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-size: cover;
+    z-index: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#color {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.365);
+
+}
+
+#picture {
+    position: fixed;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url("./comp.png");
+    background-size: cover;
+}
+
+#container {
+    z-index: 2;
+    position: relative;
+
+    font-family: Tahoma;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    text-align: center;
+}
+
+.container {
+    border-radius: 10px;
+    display: flex;
+    margin: 0.5rem 0;
+    background-color: rgba(12, 10, 32, 0.888);
+    padding-bottom: 3px;
+    height: 130vh;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5vw;
+    box-sizing: border-box;
+}
+
+label, legend {
+    text-align: left;
+    font-size: 20px;
+}
+
+input[type="text"], input[type="number"], select {
+    height: 4vh;
+    text-align: left;
+    border-radius: 7px;
+}
+
+input[type="submit"]{
+    height: 4vh;
+    border-radius: 7px;
+
+}
+
+

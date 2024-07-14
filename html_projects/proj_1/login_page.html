@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registration form</title>
+        <link rel="stylesheet" href="login_page.css">
+    </head>
+
+    <body>
+
+        <div id="color"></div>
+        <div id="picture"></div>
+
+        <div id="container">
+            <h1>Registration form</h1>
+        <p id="describtion">Fill out all the forms to sign up on our website</p>
+        
+        <form class="container" id="container">
+            <label id="name-label">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required><br />
+            <label id="email-label">Email</label>
+            <input type="text" name="email" id="email" placeholder="Enter your email" required><br />
+            <label id="number">Age (optional)</label>
+            <input type="number" name="age" id="age" placeholder="Enter your age" min=10 max=99 required><br />
+            <label id="name-label">What is your direction in IT?</label>
+            <select name="select" id="select" required>
+                <option display selected name="one">Frontend</option>
+                <option name="two">Backend</option>
+                <option name="three">Have no idea</option>
+            </select><br />
+            
+        <fieldset>
+            <legend>Are your finding the job?</legend>
+            <label><input type="radio" name="answer">&nbsp;Yes</label>
+            <label><input type="radio" name="answer">&nbsp;No</label>
+        </fieldset><br />
+
+        <fieldset>
+            <legend>What languages do you know?</legend>
+            <label for="C"><input type="checkbox" value="C">&nbsp;C</label><br />
+            <label for="Cpp"><input type="checkbox" value="Cpp">&nbsp;C++</label><br />
+            <label for="python"><input type="checkbox" value="python">&nbsp;Python</label><br />
+            <label for="java"><input type="checkbox" value="java">&nbsp;Java</label><br />
+            <label for="js"><input type="checkbox" value="js">&nbsp;JS</label><br />
+            <label for="html"><input type="checkbox" value="html">&nbsp;HTML/CSS</label><br />
+        </fieldset><br />
+
+        <label for="comments">Could you give any comments?</label>
+        <textarea id="comments" name="comments" rows="5" cols="100" placeholder="Write your opinion"></textarea>
+        <input type="submit">
+        
+
+        </form>
+        </div> 
+    </body>
+    
+
+</html>
