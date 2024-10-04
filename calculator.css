@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0e0e0e 50%, #7cc2e3 50%);
+    overflow: hidden;
+}
+.line{
+    height: 1px;
+    width: 1150px;
+    position: absolute;
+    background: #1f2629;
+    transform: rotate(135deg);
+    justify-content: center;
+    box-shadow: 5px 0 10px 2.5px#1f2629;
+    z-index: -1;
+}
+.container{
+    position: absolute;
+    width: 38%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    margin:5% 0 0 -70%;
+    animation: appear_1 8s forwards;
+}
+@keyframes appear_1{
+    0%{
+        margin-left: -125%;
+    }
+    100%{
+        margin-left: -70%;
+    }
+}
+.cloud{
+    position: relative;
+    width: 315px;
+    height: 93px;
+    border-radius: 100px;
+    filter: drop-shadow(8px 8px #5d5b5b);
+    animation: animateCloude 2s steps(1) infinite;
+}
+.cloud::before{
+    content: '';
+    position: absolute;
+    top:-40%;
+    left: 15%;
+    width: 30%;
+    height: 80%;
+    border-radius: 50%;
+    background: #393838;
+    box-shadow: 90px -10px 0 30px #393838;
+}
+.cloud::after{
+    content: '';
+    position: absolute;
+    background:#393838; 
+    inset: 0;
+    border-radius: 100px;
+    z-index: 1;
+}
+@keyframes animateCloude{
+    0%{
+        filter: drop-shadow(8px 8px rgba(63, 62, 62, 0.067)) drop-shadow(0 0 0 #5d5b5b)
+        brightness(1);
+    }
+    95%{
+        filter: drop-shadow(8px 8px #0001) drop-shadow(0 0 50px #fff5) brightness(10);
+    }
+}
+.cloud .drop{
+    position: absolute;
+    top:50%;
+    background: #7cc2e3;
+    width: 2px;
+    height: 10px;
+    transform-origin: bottom;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateY(0) scaleY(1);
+    }
+    70%{
+        transform: translateY(360px) scaleY(1);
+    }
+    80%{
+        transform: translateY(360px) scaleY(0.2);
+    }
+    100%{
+        transform: translateY(360px) scaleY(0) scaleX(20);
+    }
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+
+.container_2{
+    margin-right: -60%;
+    width: 40%;
+    height: 70%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    overflow: hidden;
+}
+.sun{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #e3b10f;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #dab12b;
+    animation: rise 8s forwards;
+}
+@keyframes rise{
+    0%{
+        right: -30%;
+        top:25%
+    }
+  
+    100%{
+        right: 10%;
+        top:5%;
+        transform: translateX(-50%);
+    }
+}
+
+.fon{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    align-self: flex-end;
+}
+.ground{
+    display: flex;
+    position: absolute;
+    width: 1400px;
+    height: 400px;
+    background: #2db823;
+    margin: 230px 0 0 250px;
+    border-radius: 100%;
+    box-shadow: -500px -20px 0 #1e481c;
+}
+.flowers{
+    width: 100%;
+    height: 100%;
+}
+.flower{
+    position: absolute;
+    width: 5%;
+    margin: 79px 0 0 250px;
+    animation: grow 8s forwards;
+}
+@keyframes grow{
+    0%{
+        width: 0%;
+        
+    }
+    100%{
+        width: 5%;
+        transform: rotate(180deg);
+    }
+}
+#one{
+    margin: 50px 0 0 500px;
+}
+#two{
+    margin: 70px 0 0 700px;
+}
+#three{
+    margin: 65px 0 0 900px;
+}
+.sheep{
+    position: absolute;
+    width: 15%;
+    margin: 11% 0 0 -9%;
+    animation: step 30s 7s forwards;
+  
+}
+@keyframes step{
+    0%{
+        margin: 11% 0 0 -9%;
+        transform: rotate(2deg);
+    }
+    5%{
+        transform: rotate(-5deg);
+    }
+    10%{
+        transform: rotate(5deg);
+    }
+    15%{
+        transform: rotate(-5deg);
+    }
+    20%{
+        transform: rotate(5deg);
+    }
+    25%{
+        transform: rotate(-5deg);
+    }
+    30%{
+        transform: rotate(5deg);
+    }
+    35%{
+        transform: rotate(-5deg);
+    }
+    40%{
+        transform: rotate(5deg);
+    }
+    45%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    55%{
+
+        transform: rotate(-5deg);
+    }
+    60%{
+        transform: rotate(5deg);
+    }
+    65%{
+        transform: rotate(-5deg);
+    }
+    70%{
+        transform: rotate(5deg);
+    }
+    75%{
+        transform: rotate(-5deg);
+    }
+    80%{
+        transform: rotate(5deg);
+    }
+    85%{
+        transform: rotate(-5deg);
+    }
+   
+    100%{
+        margin: -11% 0 0 45%;
+
+    }
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------- */
+
+.calculator{
+    width: 230px;
+    height: 290px;
+    display:flex;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 10px 8px 2px #2a2a2a;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap:1em;
+    background-color: rgb(62, 55, 59);
+    border: none;
+    animation: appear 5s 8s forwards;
+    opacity: 0;
+}
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.keyboard{
+  display: flex;
+  justify-content: center;
+  gap:1em;
+  width: 90%;
+
+}
+button{
+    width: 100px;
+    height: 25px;
+    padding:1%;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 320px;
+    cursor: pointer;
+    background-color: rgb(251, 251, 251);
+    font-size: 17px;
+    box-shadow: 3px 4px 6px #000000b0;
+    transform: scale(1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease; 
+}
+
+button:active {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); 
+    transform: scale(0.9);
+}
+
+#call{
+    width: 200px;
+    height: 30px;
+    text-align: right;
+    padding-right: 3%;
+    box-shadow: 3px 4px 6px #0000009d;
+    border: none;
+    border: none;
+    border-radius: 10px;
+}
+.red{
+    background-color: #e37c7c;
+}
+.yel{
+    background-color: #e7ec9be2;
+}
