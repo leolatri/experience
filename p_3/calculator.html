@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BA's Calculator</title>
+        <link href="calculator.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="fon">
+            <div class="ground">
+                <div class="flowers">
+                    <img class="flower" src="./free-icon-daisy-4759228.png">
+                    <img class="flower" id="one" src="./free-icon-gardenia-4759324.png">
+                    <img class="flower" id="two" src="./free-icon-oleander-4759297.png">
+                    <img class="flower" id="three" src="./free-icon-spider-plant-4759360.png">
+                    <img class="sheep" src="./free-sticker-sheep-4193251.png">
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="cloud"></div>
+            <script>
+                function rain(){
+                    let cloud = document.querySelector('.cloud');
+                    let e = document.createElement('div');
+                    let left = Math.floor(Math.random() * 320);
+                    let width= Math.random() * 5;
+                    let height= Math.random() * 50;
+                    let duration = Math.random() * 0.5;
+
+
+                    e.classList.add('drop');
+                    cloud.appendChild(e);
+                    e.style.left = left + 'px';
+                    e.style.height = height + 'px';
+                    e.style.width = width + 'px';
+                    e.style.animationDuration = 1 + duration +'s';
+
+
+                    setTimeout(function(){
+                        cloud.removeChild(e)
+                    }, 2000)
+                }
+                setInterval(function(){
+                    rain()
+                }, 20);
+            </script>
+        </div>
+        <div class="container_2">
+            <div class="sun"></div>
+            <script>
+                function rise(){
+                    let sun = document.querySelector('.sun');
+                    setTimeout(() => {
+                        sun.style.animation = 'rise 5s forwards';
+                    }, 1000);
+                }
+            </script>
+        </div>
+        <div class="line"></div>
+            <div class="calculator">
+                    <input type="text" placeholder="0" id="call">
+
+                    <div class="keyboard">
+                        <button class="red">AC</button>
+                        <button class="red">&lpar;</button>
+                        <button class="red">&rpar;</button>
+                        <button class="yel">/</button>
+                    </div>
+                    <div class="keyboard">
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button class="yel">*</button>
+                    </div> 
+                    <div class="keyboard">
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button class="yel">-</button>
+                    </div>
+                    <div class="keyboard">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button class="yel">+</button>
+                    </div>
+                    <div class="keyboard">
+                        <button>00</button>
+                        <button>0</button>
+                        <button>.</button>
+                        <button class="yel">=</button>
+                    </div>
+            </div>
+            <script src="./calculator.js"></script>
+
+    </body>
+</html>
